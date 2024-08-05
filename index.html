@@ -1,0 +1,368 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHETAN</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+            function openPDF() {
+            const pdfUrl = './assets/projects/doctors.pdf'; // Replace with the path to your PDF file
+            window.open(pdfUrl, '_blank');
+        }
+
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+
+
+
+  </head>
+  <body>
+    
+
+<main class="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
+  <header class="flex px flex-col md:flex-row justify-between w-full px-20 py-5">
+    <div class="flex items-center">
+      <h1 class="text-2xl md:text-3xl font-bold text-center">CHETAN</h1>
+      <nav class="ml-4">
+        <a href="#" class="mx-2 md:mx-4  hover:text-muted-foreground">ABOUT</a>
+        <a href="#projects" class="mx-2 md:mx-4 hover:text-muted-foreground">PROJECTS</a>
+      </nav>
+    </div>
+    <div class="flex items-center mt-4 md:mt-0">
+      <a href="mailto:info@janellebrown.com" class="text-secondary-foreground  md:px-4 py-2 rounded-lg mr-2 md:mr-4">LET'S CONNECT</a>
+      <div class="flex items-center p-2 bg-card rounded-3xl shadow px-5 " >
+        <span class="text mr-2">chetan.6.pun@gmail.com</span>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80  rounded" onclick="copyEmail()" aria-label="Copy email address">
+          <img class="bg-white  w-7 " alt="copy-icon" src="./assets/copy.gif" />
+        </button>
+      </div>
+    </div>
+</header>
+
+
+  <h2 class="text-4xl md:text-6xl font-bold text-center mt-8 md:mt-10">
+    AI <br />
+    ENGINEER, <br />
+    BACKEND<br/> DEVELOPER
+    
+  </h2>
+  <p class="text-base md:text-lg text-center mt-4">
+    CURRENTLY CRAFTING <br />
+    EXPERIENCES AT TICKETSEWA
+  </p>
+  <p class="text-sm text-center mt-2">(2023 – PRESENT)</p>
+  <br/>
+  <div class="flex gap-10">
+    <a  href = 'https://github.com/chetan-pun'><img class="w-[5rem] hover:scale-[1.2] duration-300 cursor-pointer" src ='./assets/github1.png' alt = 'github-icon' /></a>
+    <a href = 'https://www.linkedin.com/in/chetan-phakami-pun-03a813220/'><img class="w-[5rem] hover:scale-[1.2] duration-300 cursor-pointer" src ='./assets/linked-in.png' alt = 'linkedin-icon' /></a>
+    <a href = ''><img class="w-[5rem] hover:scale-[1.2] duration-300 cursor-pointer" src ='./assets/gmail.png' alt = 'gmail-icon' /></a>
+
+  </div>
+  <br/>
+  <br/>
+  <div class="shadow-lg w-1/3 p-6 rounded-[40px] flex gap-10 items-center" >
+   <img class="w-[35px] h-[35px]" src="./assets/luna.gif" alt = "luna"/>
+   <p>Hi I'm Luna, Chetan's AI assistant, want to know more about him? Scroll and ask me!!</p>
+  </div>
+  <br/>
+  <a href = "#luna" >
+  <img class="cursor-pointer" src="./assets/arrowdown.gif" alt = 'arrowdown'/>
+</a>
+  <!-- <img aria-hidden="true" alt="portrait" src="./assets/photo.png" class="rounded-lg mt-8 md:mt-10 w-[20rem]" /> -->
+
+  <div  class="px-20 py-20 " >
+    <h2 class="text-4xl py-5  text-center " >"The best way to predict the future is to invent it." – Alan Kay</h2>
+    <div class="flex justify-between gap-0 px-48 py-10 text-xl">
+        <div class="w-full">
+        <p class="w-full" >About Me:</p><br/><br/><br/>
+        </div>
+
+        <div class="w-full leading-8 "  >
+            <p>Hi, I am Chetan, a software engineer. Want to know more about me? Ask my Custom Built Personal AI assistant. Luna</p>
+        </div>
+        
+    </div>
+    <div id = 'luna' class="px-20 py-0">
+      <h2 class="text-3xl text-center">Talk to my Assistant Luna</h2>
+      <p class="text-md text-muted-foreground text-center " >Made by Chetan</p>
+      <br />
+      <br />
+      <div class="max-w-xl mx-auto p-4 bg-card rounded-lg shadow-2xl  h-[37rem]">
+        <h1 class="text-xl font-bold text-foreground">Hi, I am Luna</h1>
+        <h2 class="text-md text-muted-foreground">Chetan's AI Assistant</h2>
+       
+        <br />
+        <div id = 'questions' class="mt-4">
+          <div class="question">
+            <button class="bg-secondary text-secondary-foreground rounded-full px-4 py-2 mr-2 mb-2 hover:bg-secondary/80">What's Chetan Tech Background?</button>
+          </div>
+          <div class="question">
+            <button class="bg-secondary text-secondary-foreground rounded-full px-4 py-2 mr-2 mb-2 hover:bg-secondary/80">What's your purpose?</button>
+          </div>
+          <div class="question">
+            <button class="bg-secondary text-secondary-foreground rounded-full px-4 py-2 mr-2 mb-2 hover:bg-secondary/80">Who is Chetan?</button>
+          </div>
+        </div>
+    
+        <div id = 'chatboxMessages' class="mt-4 max-h-[15rem] overflow-y-auto h-[15rem] " >
+          <div class="message">
+          </div>
+        </div>
+    
+        <div class="mt-4 flex items-center">
+          <input id="userInput" type="text" placeholder="Message Luna" class="flex-grow p-2 border border-border rounded-l-lg focus:outline-none "/>
+          <button id="sendMessage" class=" p-2.5 border-2 text-primary-foreground rounded-r-lg px-4 ">
+              <img class="w-[20px]" src="./assets/up-arrow.gif" alt="up arrow ">
+          </button>
+        </div>
+      </div>
+    </div>
+   
+
+  </div>
+
+  <div class=" w-full flex flex-col justify-center gap-3 text-center" >
+    <h2 class="text-3xl " >MY SKILLS</h2>
+    <p class="font-light text-muted-foreground  " >Skills I have acquired till now</p>
+
+    <div class=" flex px-20 py-10 gap-10 justify-center flex-wrap " >
+        <div class="w-80 flex gap-3 flex-col items-center">
+            <img class="w-20" src="./assets/python.gif"/>
+            <p>Python</p>
+
+             <p class=" text-muted-foreground">Leverage libraries such as TensorFlow, Keras, Pytorch for AI
+            </p>
+        </div>
+        <div class="w-80 flex gap-3 flex-col items-center">
+            <img class="w-20" src="./assets/js.gif"/>
+            <p>Javascript</p>
+            <p class=" text-muted-foreground  " >Build dynamic web applications and microservices architecture.
+
+        </div>
+        <div class="w-80 flex gap-3 flex-col items-center">
+            <img class="w-20" src="./assets/github-icon.png"/>
+            <p>Github</p>
+            <p class=" text-muted-foreground  " >Version control for efficient collaboration and code management.
+
+        </div>
+        <div class="w-80 flex gap-3 flex-col items-center">
+            <img class="w-20" src="./assets/docker.png"/>
+            <p>Docker</p>
+            <p class=" text-muted-foreground  " >Containerizing applications for consistency across development and production environments.
+
+        </div>
+        <div class="w-80 flex gap-3 flex-col items-center">
+            <img class="w-20" src="./assets/sql.png"/>
+            <p>SQL</p>
+            <p class=" text-muted-foreground  " >Structured data storage and management.
+
+        </div>
+        <div class="w-80 flex gap-3 flex-col items-center">
+            <img class="w-20"  src="./assets/design.gif"/>
+            <p>System Design</p>
+            <p class=" text-muted-foreground  " >Design scalable and efficient system architectures.
+        </div>
+    </div>
+
+  </div>
+
+  <div id = 'projects' class="px-10 py-20" >
+    <h2 class="text-3xl text-center ">Projects</h2><br/>
+    <div class=" flex px-20 py-10 gap-20 justify-center flex-wrap " >
+      <div class="max-w-md cursor-pointer  hover:scale-[1.05] duration-300 ">
+
+        <div class="relative max-w-md mx-auto">
+            <div class="overflow-hidden rounded-lg">
+              <div class="flex slider">
+                <img src="./assets/projects/luna/chat.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
+                <img src="./assets/projects/luna/luna_arc.png" alt="Slide 2" class="w-full transition-transform duration-500 ease-in-out transform" />
+                <img src="./assets/projects/luna/chat.png" alt="Slide 3" class="w-full transition-transform duration-500 ease-in-out transform" />
+              </div>
+            </div>
+          </div>
+          <br/>
+
+          <h3 class="text-[20px]" >Luna</h3>
+          <p class="text-muted-foreground" >Luna is an AI assistant designed to simulate conversations
+             and answer questions about Chetan and itself. It is built on top
+              of the Gemma 2 model and uses RAG (Retrieval-Augmented Generation) for 
+              retrieving information. Additionally, Luna improves with every conversation. </p>
+        </div>
+        <div class="max-w-md  cursor-pointer hover:scale-[1.05] duration-300 ">
+
+        <div class="relative max-w-md mx-auto">
+            <div class="overflow-hidden rounded-lg">
+              <div class="flex slider">
+                <img src="./assets/projects/picatu/landing1.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
+                <img src="./assets/projects/picatu/landing2.png" alt="Slide 2" class="w-full transition-transform duration-500 ease-in-out transform" />
+                <img src="./assets/projects/picatu/landing3.png" alt="Slide 3" class="w-full transition-transform duration-500 ease-in-out transform" />
+              </div>
+            </div>
+          </div>
+          <br/>
+
+          <h3 class="text-[20px]" >Picatu</h3>
+          <p class="text-muted-foreground" > Picatu is a tool that
+             searches for images of
+              specific individuals in specific event
+               databases (marriage, ceremony, festivals).
+                Users input an image, and the system returns matching 
+                images using a deep learning-based model trained on labeled data.</p>
+        </div>
+
+
+        <div onclick="openPDF()" class="max-w-md cursor-pointer hover:scale-[1.05] duration-300  ">
+
+            <div class="relative max-w-md mx-auto">
+                <div class="overflow-hidden rounded-lg">
+                  <div class="flex">
+                    <img src="./assets/projects/doctors.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
+                  </div>
+                </div>
+              </div>
+              <br/>
+    
+              <h3 class="text-[20px]" >Trusted Doctors</h3>
+              <p class="text-muted-foreground" > Trusted Doctors is an
+                innovative web application designed to connect users with healthcare
+                 professionals, enabling seamless communication and access to quality healthcare services.</p>
+            </div>
+            <a href = 'https://nepaljunglecamp.com/' target="_blank" class="max-w-md cursor-pointer hover:scale-[1.05] duration-300 ">
+
+                <div class="relative max-w-md mx-auto">
+                    <div class="overflow-hidden rounded-lg">
+                      <div class="flex slider">
+                        <img src="./assets/projects/travellers/landing1.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
+                        <img src="./assets/projects/travellers/landing2.png" alt="Slide 2" class="w-full transition-transform duration-500 ease-in-out transform" />
+                        <img src="./assets/projects/travellers/landing3.png" alt="Slide 3" class="w-full transition-transform duration-500 ease-in-out transform" />
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+        
+                  <h3 class="text-[20px]" >Travellers Jungle Camp</h3>
+                  <p class="text-muted-foreground" >
+                    Travellers Jungle Camp is a resort based in Chitwan. Customers can book and reserve rooms, jungle safaris, and more through our website.
+                  </p>
+                </a>
+               
+
+  </div>
+
+<!-- 
+  <div class="w-l" >
+    <h2 class="text-3xl text-center" >Architecture of Luna</h2><br/><br/>
+    <img class="w-3/5 mr-auto ml-auto" src = './assets/luna_arc.png' alt = 'architecture of luna'/>
+
+  </div> -->
+
+
+  
+</main>
+
+
+
+
+
+
+<!-- 
+<sidebar class="fixed flex flex-col gap-3 bottom-10 left-10">
+    <a  href = ''><img class="w-8 hover:scale-[1.2] duration-300 cursor-pointer" src ='./assets/github.png' alt = 'github-icon' /></a>
+    <a href = ''><img class="w-8 hover:scale-[1.2] duration-300 cursor-pointer" src ='./assets/linkedin.png' alt = 'linkedin-icon' /></a>
+    <a href = ''><img class="w-8 hover:scale-[1.2] duration-300 cursor-pointer" src ='./assets/youtube.png' alt = 'youtube-icon' /></a>
+</sidebar> -->
+
+<script src="index.js" async></script>
+
+  </body>
+</html>
