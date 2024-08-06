@@ -50,6 +50,7 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
           appendMessage('bot',data.response, true);
         })
         .catch((error) => {
+          // console.log('jello')
           console.log(error)
         });
     }
