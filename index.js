@@ -34,7 +34,7 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
       chatboxMessages.appendChild(img)
       userInput.value = '';
       await fetch('https://luna-zgb5.onrender.com', {
-        method: 'POST',  // Specify the method
+        method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
         },
