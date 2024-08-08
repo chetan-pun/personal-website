@@ -20,6 +20,8 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
     }
   });
 
+  // 'https://luna-zgb5.onrender.com/chat
+  // http://127.0.0.1:8000/
  async function sendMessage() {
    const chatboxMessages = document.getElementById('chatboxMessages');
     console.log('clicked')
@@ -33,7 +35,7 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
       appendMessage('user', message);
       chatboxMessages.appendChild(img)
       userInput.value = '';
-      await fetch('https://luna-zgb5.onrender.com/chat', {
+      await fetch('https://api.ticketsewa.com.np/ai/chat', {
         method: 'POST', 
         headers: {
           'Content-Type': 'application/json',
