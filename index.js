@@ -46,13 +46,13 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
       })
         .then(response => response.json())
         .then((data)=>{
-          console.log(data)
+       
           chatboxMessages.removeChild(img)
     
           appendMessage('bot',data.response, true);
         })
         .catch((error) => {
-          // console.log('jello')
+
           console.log(error)
         });
     }
@@ -78,7 +78,6 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
     chatboxMessages.appendChild(messageElement);
     chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
   }
-
 
 
 
