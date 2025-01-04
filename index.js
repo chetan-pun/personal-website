@@ -11,6 +11,29 @@ setInterval(() => {
 }, 2000);
 
 
+document.getElementById('research').addEventListener('click',function(){
+
+   const inputfield = document.getElementById('userInput');
+   inputfield.value = "Tell me about Chetan's research?"
+   sendMessage()
+
+})
+
+document.getElementById('purpose').addEventListener('click',function(){
+
+   const inputfield = document.getElementById('userInput');
+   inputfield.value = "What's your purpose?"
+   sendMessage()
+
+})
+
+document.getElementById('chetan').addEventListener('click',function(){
+
+   const inputfield = document.getElementById('userInput');
+   inputfield.value = "Who is Chetan?"
+   sendMessage()
+
+})
 
 //handle chat dialogue
 document.getElementById('sendMessage').addEventListener('click', sendMessage);
@@ -20,8 +43,6 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
     }
   });
 
-  // 'https://luna-zgb5.onrender.com/chat
-  // http://127.0.0.1:8000/
  async function sendMessage() {
    const chatboxMessages = document.getElementById('chatboxMessages');
     console.log('clicked')
@@ -35,24 +56,22 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
       appendMessage('user', message);
       chatboxMessages.appendChild(img)
       userInput.value = '';
-      await fetch('https://api.ticketsewa.com.np/ai/chat', {
-        method: 'POST', 
+      await fetch('http://127.0.0.1:8000/chat', {
+        method: 'POST',  // Specify the method
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           prompt: message,
+          chat_history : [{}]
         }),
       })
         .then(response => response.json())
         .then((data)=>{
-       
           chatboxMessages.removeChild(img)
-    
           appendMessage('bot',data.response, true);
         })
         .catch((error) => {
-
           console.log(error)
         });
     }
@@ -68,16 +87,33 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
     messageElement.style.width = 'fit-content';
 
     if (sender === 'user') {
+      messageElement.textContent = message;
+      chatboxMessages.appendChild(messageElement);
       messageElement.classList.add('bg-secondary','text-black', 'self-end', 'text-right', 'ml-auto');
     } else if (isResponse) {
       messageElement.classList.add('bg-black', 'text-white', 'self-start', 'text-left', 'mr-auto');
+      messageElement.textContent = message.response;
+      chatboxMessages.appendChild(messageElement);
+      if (message.links !==null) {
+        console.log('interes')
+        for(const item of message.links){
+          console.log(item.link_url)
+          const linkElement = document.createElement('a');
+          linkElement.href = item.link_url;
+          linkElement.textContent = item.name;
+          linkElement.classList.add('ml-4','underline','pointer')
+          messageElement.appendChild(linkElement);
+        }      
+      } else {
+        messageElement.textContent = message.response;
+      }
     } else {
       messageElement.classList.add('bg-yellow-500', 'self-start', 'text-left', 'mr-auto');
     }
-    messageElement.textContent = message;
-    chatboxMessages.appendChild(messageElement);
+
     chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
   }
+
 
 
 
