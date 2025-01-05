@@ -13,27 +13,28 @@ setInterval(() => {
 
 document.getElementById('research').addEventListener('click',function(){
 
-   const inputfield = document.getElementById('userInput');
-   inputfield.value = "Tell me about Chetan's research?"
-   sendMessage()
+  const inputfield = document.getElementById('userInput');
+  inputfield.value = "Tell me about Chetan's research?"
+  sendMessage()
 
 })
 
 document.getElementById('purpose').addEventListener('click',function(){
 
-   const inputfield = document.getElementById('userInput');
-   inputfield.value = "What's your purpose?"
-   sendMessage()
+  const inputfield = document.getElementById('userInput');
+  inputfield.value = "What's your purpose?"
+  sendMessage()
 
 })
 
 document.getElementById('chetan').addEventListener('click',function(){
 
-   const inputfield = document.getElementById('userInput');
-   inputfield.value = "Who is Chetan?"
-   sendMessage()
+  const inputfield = document.getElementById('userInput');
+  inputfield.value = "Who is Chetan?"
+  sendMessage()
 
 })
+
 
 //handle chat dialogue
 document.getElementById('sendMessage').addEventListener('click', sendMessage);
@@ -113,7 +114,5 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
 
     chatboxMessages.scrollTop = chatboxMessages.scrollHeight;
   }
-
-
 
 
