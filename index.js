@@ -1,4 +1,4 @@
-
+let chat_history = []
 
 //slide animation in projects section
 const images = document.querySelectorAll('.slider img');
@@ -35,7 +35,6 @@ document.getElementById('chetan').addEventListener('click',function(){
 
 })
 
-
 //handle chat dialogue
 document.getElementById('sendMessage').addEventListener('click', sendMessage);
   document.getElementById('userInput').addEventListener('keypress', function (e) {
@@ -64,13 +63,13 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
         },
         body: JSON.stringify({
           prompt: message,
-          chat_history : [{}]
+          chat_history 
         }),
       })
         .then(response => response.json())
         .then((data)=>{
           chatboxMessages.removeChild(img)
-          appendMessage('bot',data.response, true);
+          appendMessage('bot',data.response,message, true);
         })
         .catch((error) => {
           console.log(error)
@@ -78,7 +77,7 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
     }
   }
 
-  function appendMessage(sender, message, isResponse = false) {
+  function appendMessage(sender, message,user_prompt ,isResponse = false) {
     const chatboxMessages = document.getElementById('chatboxMessages');
     const messageElement = document.createElement('div');
 
@@ -90,10 +89,12 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
     if (sender === 'user') {
       messageElement.textContent = message;
       chatboxMessages.appendChild(messageElement);
+      chat_history.push({user : user_prompt ,response : message})
       messageElement.classList.add('bg-secondary','text-black', 'self-end', 'text-right', 'ml-auto');
     } else if (isResponse) {
       messageElement.classList.add('bg-black', 'text-white', 'self-start', 'text-left', 'mr-auto');
       messageElement.textContent = message.response;
+      chat_history.push({user :  user_prompt, response : message.response})
       chatboxMessages.appendChild(messageElement);
       if (message.links !==null) {
         console.log('interes')
