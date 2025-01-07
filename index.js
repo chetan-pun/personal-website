@@ -56,7 +56,7 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
       appendMessage('user', message);
       chatboxMessages.appendChild(img)
       userInput.value = '';
-      await fetch('http://127.0.0.1:8000/chat', {
+      await fetch('https://api.ticketsewa.com.np/ai/chat', {
         method: 'POST',  // Specify the method
         headers: {
           'Content-Type': 'application/json',
