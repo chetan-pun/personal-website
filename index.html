@@ -104,7 +104,105 @@
 			}
 		</style>
 
+ <style>
+  :root{ --main-color: #0883FF; }
+  .main-timeline{ font-family: 'Poppins', sans-serif; }
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    width: 50%;
+    padding: 60px 0 0 0;
+    margin: 0 5px 25px 0;
+    float: left;
+}
+.main-timeline .timeline-content{
+    min-height: 100px;
+    padding: 0 15px 0 0;
+    border-right: 2px solid var(--main-color);
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:hover{ text-decoration: none; }
+.main-timeline .timeline-content:before,
+.main-timeline .timeline-content:after{
+    content: '';
+    background-color: var(--main-color);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    top: 0;
+}
+.main-timeline .timeline-content:after{
+    top: auto;
+    bottom: 0;
+}
+.main-timeline .timeline-year{
+    color: #fff;
+    background-color: var(--main-color);
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 3px 40px 3px 40px;
+    position: absolute;
+    right: -2px;
+    top: -60px;
+    z-index: 1;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%);
+}
+.main-timeline .title{
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0 0 7px;
+}
+.main-timeline .description{
+    color: #555;
 
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    margin: 0 0 25px 5px;
+    float: right;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content{
+    text-align: left;
+    padding: 0 0 0 15px;
+    border-left: 2px solid var(--main-color);
+    border-right: none;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:before,
+.main-timeline .timeline:nth-child(even) .timeline-content:after{
+    right: auto;
+    left: -4px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-year{
+    right: auto;
+    left: -2px;
+    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
+}
+.main-timeline .timeline:nth-child(2){ --main-color: #8E45B6; }
+.main-timeline .timeline:nth-child(3){ --main-color: #FF8000; }
+.main-timeline .timeline:nth-child(4){ --main-color: #FE3B0D; }
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        margin: 0 0 25px;
+    }
+}
+
+ </style>
 
   </head>
   <body>
@@ -222,6 +320,56 @@
       <br/><img src = './assets/gpt_semantic_cache.png' alt = "GPT Semantic Cache" /><br/>
       <p>It achieved up to 68.8% reduction in API calls across various query categories, significantly lowering operational costs. It delivered faster response times, improving user experience compared to traditional methods, and demonstrated exceptional reliability with positive hit rates exceeding 97%, ensuring high accuracy in retrieved cached responses.</p>
     </div>
+  </div>
+
+  <div class="">
+    <h2 class="text-3xl text-center " >WORK EXPERIENCES</h2>
+    <p class="font-light text-muted-foreground text-center  " >Companies that I have worked with</p>
+
+
+    <div class="container p-32">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="main-timeline">
+                  <div class="timeline">
+                      <a href="#" class="timeline-content">
+                          <div class="timeline-year">MAY 2023 - JUN 2024</div>
+                          <h3 class="title">Co-Founder and Engineer</h3>
+                          <p class="description">
+                            Co-founded TicketSewa, an online ticketing platform based in Nepal.
+                            Played a key role in various aspects of the company, including:<br/>
+                            • System Designing,<br/>
+                            • Project Management,<br/>
+                            • Building the backend server, &<br/>
+                            • Deployment
+                          </p>
+                      </a>
+                  </div>
+                  <div class="timeline">
+                      <a href="#" class="timeline-content">
+                          <div class="timeline-year">AUG 2024 - MAR 2025</div>
+                          <h3 class="title">Backend and AI engineer</h3>
+                          <p class="description">
+                            Built lecturely.ai, an AI companion for students. I was invloved in designing the entire system, developing and managing multiple-ai-agents, managaing message brokers, and implementing a microservices architecture. I also worked on the deployment of the system using Docker and AWS.
+                          </p>
+                      </a>
+                  </div>
+
+                  <div class="timeline">
+                    <a href="#" class="timeline-content">
+                        <div class="timeline-year">JAN 2025 - CURRENT</div>
+                        <h3 class="title">Chief Technology Officer</h3>
+                        <p class="description">
+                          As the CTO and co-founder of Karela Technology, I lead the company's technical vision and innovation, overseeing the development of cutting-edge solutions. I manage a talented team of engineers, driving strategic decisions and ensuring the successful execution of technology initiatives to meet business goals.
+                        </p>
+                    </a>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
   </div>
 
   <div class=" w-full flex flex-col justify-center gap-3 text-center" >
