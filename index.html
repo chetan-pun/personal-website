@@ -202,6 +202,63 @@
     }
 }
 
+
+@media screen and (max-width:767px){
+  .main-timeline .timeline,
+  .main-timeline .timeline:nth-child(even){
+      width: 100%;
+      margin: 0 0 25px;
+  }
+}
+
+/* ─────────── NEW: iPad / Tablet View ─────────── */
+@media screen and (max-width:1024px) and (min-width:768px) {
+  /* Make each timeline item full-width */
+  .main-timeline .timeline,
+  .main-timeline .timeline:nth-child(even) {
+      width: 100%;
+      margin: 0 0 25px;
+      float: none;
+  }
+
+  /* Tweak padding so it doesn’t feel too “wide” on tablets */
+  .main-timeline .timeline-content {
+      padding: 0 10px;
+  }
+
+  /* Slightly smaller year badge and title */
+  .main-timeline .timeline-year {
+      top: -50px;          /* lift it a bit */
+      font-size: 20px;
+      padding: 2px 30px;
+  }
+  .main-timeline .title {
+      font-size: 18px;
+  }
+}
+
+/* ─────────── Existing Mobile View ─────────── */
+/* (you already have this, but you could also tweak font-sizes here) */
+@media screen and (max-width:767px){
+  .main-timeline .timeline,
+  .main-timeline .timeline:nth-child(even){
+      width: 100%;
+      margin: 0 0 25px;
+  }
+  .main-timeline .timeline-year {
+      font-size: 18px;
+      padding: 2px 25px;
+      top: -40px;
+  }
+  .main-timeline .title {
+      font-size: 16px;
+  }
+  .main-timeline .description {
+      font-size: 14px;
+      line-height: 20px;
+  }
+}
+
  </style>
 
   </head>
@@ -327,7 +384,7 @@
     <p class="font-light text-muted-foreground text-center  " >Companies that I have worked with</p>
 
 
-    <div class="container p-32">
+    <div class="container p-4 md:p-32">
       <div class="row">
           <div class="col-md-12">
               <div class="main-timeline">
