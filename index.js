@@ -1,12 +1,14 @@
 let chat_history = []
 
+
+
 //slide animation in projects section
 const images = document.querySelectorAll('.slider img');
 let counter = 1;
 setInterval(() => {
     images.forEach(img => img.style.transform = `translateX(-${counter * 100}%)`);
     counter++;
-    console.log(images.length)
+
     if (counter ===images.length/3) counter = 0;
 }, 2000);
 
@@ -117,5 +119,14 @@ document.getElementById('sendMessage').addEventListener('click', sendMessage);
   }
 
 
+function copyEmail(){
+  navigator.clipboard.writeText("chetan.6.pun@gmail.com")
+  .then(() => {
+    document.getElementById("copyMessage").innerText = "Text copied to clipboard!";
+  })
 
+  setTimeout(() => {
+    document.getElementById("copyMessage").innerText = "";
+  }, 1000);
+}
 

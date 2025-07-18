@@ -104,171 +104,14 @@
 			}
 		</style>
 
- <style>
-  :root{ --main-color: #0883FF; }
-  .main-timeline{ font-family: 'Poppins', sans-serif; }
-.main-timeline:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-.main-timeline .timeline{
-    width: 50%;
-    padding: 60px 0 0 0;
-    margin: 0 5px 25px 0;
-    float: left;
-}
-.main-timeline .timeline-content{
-    min-height: 100px;
-    padding: 0 15px 0 0;
-    border-right: 2px solid var(--main-color);
-    display: block;
-    position: relative;
-}
-.main-timeline .timeline-content:hover{ text-decoration: none; }
-.main-timeline .timeline-content:before,
-.main-timeline .timeline-content:after{
-    content: '';
-    background-color: var(--main-color);
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    position: absolute;
-    right: -4px;
-    top: 0;
-}
-.main-timeline .timeline-content:after{
-    top: auto;
-    bottom: 0;
-}
-.main-timeline .timeline-year{
-    color: #fff;
-    background-color: var(--main-color);
-    font-size: 25px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    padding: 3px 40px 3px 40px;
-    position: absolute;
-    right: -2px;
-    top: -60px;
-    z-index: 1;
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%);
-}
-.main-timeline .title{
-    color: var(--main-color);
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: capitalize;
-    margin: 0 0 7px;
-}
-.main-timeline .description{
-    color: #555;
 
-    font-weight: 500;
-    line-height: 22px;
-    text-align: left;
-    letter-spacing: 0.5px;
-    margin: 0;
-}
-.main-timeline .timeline:nth-child(even){
-    margin: 0 0 25px 5px;
-    float: right;
-}
-.main-timeline .timeline:nth-child(even) .timeline-content{
-    text-align: left;
-    padding: 0 0 0 15px;
-    border-left: 2px solid var(--main-color);
-    border-right: none;
-}
-.main-timeline .timeline:nth-child(even) .timeline-content:before,
-.main-timeline .timeline:nth-child(even) .timeline-content:after{
-    right: auto;
-    left: -4px;
-}
-.main-timeline .timeline:nth-child(even) .timeline-year{
-    right: auto;
-    left: -2px;
-    clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%);
-}
-.main-timeline .timeline:nth-child(2){ --main-color: #8E45B6; }
-.main-timeline .timeline:nth-child(3){ --main-color: #FF8000; }
-.main-timeline .timeline:nth-child(4){ --main-color: #FE3B0D; }
-@media screen and (max-width:767px){
-    .main-timeline .timeline,
-    .main-timeline .timeline:nth-child(even){
-        width: 100%;
-        margin: 0 0 25px;
-    }
-}
-
-
-@media screen and (max-width:767px){
-  .main-timeline .timeline,
-  .main-timeline .timeline:nth-child(even){
-      width: 100%;
-      margin: 0 0 25px;
-  }
-}
-
-/* ─────────── NEW: iPad / Tablet View ─────────── */
-@media screen and (max-width:1024px) and (min-width:768px) {
-  /* Make each timeline item full-width */
-  .main-timeline .timeline,
-  .main-timeline .timeline:nth-child(even) {
-      width: 100%;
-      margin: 0 0 25px;
-      float: none;
-  }
-
-  /* Tweak padding so it doesn’t feel too “wide” on tablets */
-  .main-timeline .timeline-content {
-      padding: 0 10px;
-  }
-
-  /* Slightly smaller year badge and title */
-  .main-timeline .timeline-year {
-      top: -50px;          /* lift it a bit */
-      font-size: 20px;
-      padding: 2px 30px;
-  }
-  .main-timeline .title {
-      font-size: 18px;
-  }
-}
-
-/* ─────────── Existing Mobile View ─────────── */
-/* (you already have this, but you could also tweak font-sizes here) */
-@media screen and (max-width:767px){
-  .main-timeline .timeline,
-  .main-timeline .timeline:nth-child(even){
-      width: 100%;
-      margin: 0 0 25px;
-  }
-  .main-timeline .timeline-year {
-      font-size: 18px;
-      padding: 2px 25px;
-      top: -40px;
-  }
-  .main-timeline .title {
-      font-size: 16px;
-  }
-  .main-timeline .description {
-      font-size: 14px;
-      line-height: 20px;
-  }
-}
-
-
-
- </style>
 
   </head>
   <body>
     
 
 <main class="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
-  <header class="flex px-5 py-5  flex-row md:flex-row justify-between w-full sm:flex-row  lg:px-20 lg:py-5 border-b border-gray-200 
+  <header class="flex px-5 py-5 shadow-sm flex-row md:flex-row justify-between w-full sm:flex-row  lg:px-20 lg:py-5 border-b border-gray-200 
   '  ">
     <div class="flex items-center">
       <h1 class="text-2xl md:text-3xl font-bold text-center">CHETAN</h1>
@@ -277,13 +120,14 @@
         <a href="#projects" class="mx-2 md:mx-4 hover:text-muted-foreground">PROJECTS</a>
       </nav>
     </div>
-    <div class="flex items-center  md:mt-0">
+    <div class="flex relative items-center  md:mt-0">
       <a href="#contact" class="text-secondary-foreground  md:px-4  rounded-lg mr-2 md:mr-4">LET'S CONNECT</a>
       <div  class="flex items-center p-2 bg-card rounded-3xl shadow px-5 hidden md:flex lg:flex xl:flex  2xl :flex" >
         <span class="text mr-2">chetan.6.pun@gmail.com</span>
         <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80  rounded" onclick="copyEmail()" aria-label="Copy email address">
           <img class="bg-white  w-7 " alt="copy-icon" src="./assets/copy.gif" />
         </button>
+        <p class="absolute top-20" id="copyMessage" style="color: green;"></p>
       </div>
     </div>
 </header>
@@ -302,7 +146,7 @@
   <br/>
   <div class="flex md:gap-5 gap-5 xl:gap-10 lg:gap-10 ">
     <a  href = 'https://github.com/chetan-pun'><img class="lg:w-[4rem] hover:scale-[1.2] md:w-[2rem] w-[2rem] duration-300 cursor-pointer" src ='./assets/github1.png' alt = 'github-icon' /></a>
-    <a href = 'https://www.linkedin.com/in/chetan-phakami-pun-03a813220/'><img class="lg:w-[4rem] w-[3rem] hover:scale-[1.2] md:w-[2rem]  duration-300 cursor-pointer" src ='./assets/linked-in.png' alt = 'linkedin-icon' /></a>
+    <a href = 'https://www.linkedin.com/in/chetan-phakami-pun-03a813220/'><img class="lg:w-[4rem] w-[2rem] hover:scale-[1.2] md:w-[2rem]  duration-300 cursor-pointer" src ='./assets/linked-in.png' alt = 'linkedin-icon' /></a>
     <a href = 'mailto:chetan.6.pun@gmail.com'><img class="lg:w-[4rem] hover:scale-[1.2] duration-300 md:w-[2rem] w-[2rem]  cursor-pointer" src ='./assets/gmail.png' alt = 'gmail-icon' /></a>
 
   </div>
@@ -326,7 +170,7 @@
       </div>
 
       <div class="w-full leading-8 "  >
-          <p>Hi, I am Chetan, a software engineer. Want to know more about me? Ask my Custom Built Personal AI assistant. Luna</p>
+          <p>Hi, I am Chetan, a software engineer specializing in desiging and building complex and scalable systems.. Want to know more about me? Ask my Custom Built Personal AI assistant. Luna</p>
           <br/>
       </div>
   </div>
@@ -369,6 +213,134 @@
 
   </div>
 
+  
+  <div class="w-full bg-[#f8f7f1] mb-4 py-12 px-4 md:px-12">
+    <!-- Title -->
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
+      My Work Experience
+    </h2>
+  
+    <div class="relative">
+      <!-- vertical dashed line, only on md+ -->
+      <div class="hidden md:flex absolute inset-0 justify-center">
+        <div class="h-full border-r-2 border-dashed border-gray-600"></div>
+      </div>
+  
+      <div class="space-y-12 md:space-y-16">
+        <!-- Entry 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-9 items-start">
+          <!-- left text -->
+          <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
+            <div class="text-center md:text-right">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Ticket Sewa Pvt Ltd.
+                <br/>
+                <span class="text-gray-600 mt-1 font-normal "> Pokhara, Nepal</span>
+              </h3>
+              <p class="text-gray-600 mt-1">May 2023 - Jun 2024</p>
+            </div>
+          </div>
+          <!-- dot -->
+          <div class="md:col-span-1 flex justify-center relative">
+            <div
+              class="w-8 h-8 bg-white border-2 border-dotted border-gray-600 rounded-full flex items-center justify-center">
+              <div class="w-4 h-4 bg-teal-600 rounded-full"></div>
+            </div>
+          </div>
+          <!-- right text -->
+          <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Co-founder and Sotware Engineer
+              </h3>
+              <div class="text-gray-700 mt-1 leading-relaxed">
+                <p>
+                  Co‑founded <strong>TicketSewa</strong>, an online ticketing platform based in Nepal. As Co‑founder and Backend Engineer, I architected and implemented a microservices‑based system—leveraging Redis for high‑speed caching and AWS for containerized deployment—to ensure seamless scalability and 24/7 availability.
+                </p>
+              
+                <p class="mt-4 font-semibold">Key Responsibilities:</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                  <li>System design and microservices architecture planning.</li>
+                  <li>Development of RESTful and event‑driven APIs in Node.js.</li>
+                  <li>Project management and coordination across product, design, and dev teams.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Entry 2 -->
+        <div class="grid grid-cols-1 md:grid-cols-9 items-start">
+          <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
+            <div class="text-center md:text-right">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Lecturely AI
+                <br/>
+                <span class="text-gray-600 mt-1 font-normal ">Arizona ,United States</span>
+              </h3>
+              <p class="text-gray-600 mt-1">Aug 2024 - Mar 2025</p>
+            </div>
+          </div>
+          <div class="md:col-span-1 flex justify-center relative">
+            <div
+              class="w-8 h-8 bg-white border-2 border-dotted border-gray-600 rounded-full flex items-center justify-center">
+              <div class="w-4 h-4 bg-red-400 rounded-full"></div>
+            </div>
+          </div>
+          <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Backend & AI engineer
+              </h3>
+              <div class="text-gray-700 mt-1 leading-relaxed">
+                <p>As a Backend and AI engineer, I built fault-tolerant microservices powering multi-agent workflow using Node.Js, Rabbitmq and Docker.</p>
+                <p class="mt-4 font-semibold">Responsibilities:</p>
+                <ul class="list-disc list-inside ml-4 space-y-1">
+                  <li>System designing.</li>
+                  <li>Developing RESTful and event-driven APIs in Node.js. </li>
+                  <li>Develop AI agents using OpenAI API.</li>
+                  <li>Integrated Rabbitmq for reliable inter-service messaging and queuing.</li>
+                  <li>Containerized services with Docker and deployed on AWS EKS.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Entry 3 -->
+        <div class="grid grid-cols-1 md:grid-cols-9 items-start">
+          <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
+            <div class="text-center md:text-right">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Karela Technologies Inc.
+                <br/>
+                <span class="text-gray-600 mt-1 font-normal "> Arizona ,United States</span>
+              </h3>
+              <p class="text-gray-600 mt-1">Jan 2025 - Present</p>
+            </div>
+          </div>
+          <div class="md:col-span-1 flex justify-center relative">
+            <div
+              class="w-8 h-8 bg-white border-2 border-dotted border-gray-600 rounded-full flex items-center justify-center">
+              <div class="w-4 h-4 bg-yellow-400 rounded-full"></div>
+            </div>
+          </div>
+          <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
+            <div class="text-center md:text-left">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Chief Technology Officer
+              </h3>
+              <p class="text-gray-700 mt-1 leading-relaxed">
+                As the CTO and co-founder of Karela Technology, I lead the company's technical vision and innovation, overseeing the development of cutting-edge solutions. I manage a talented team of engineers, driving strategic decisions and ensuring the successful execution of technology initiatives to meet business goals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
   <div  class="px-5 lg:px-20  py-20 lg:w-2/3 ">
     <h2 class="text-3xl text-center " >MY RESEARCH</h2><br/><br/>
     <h2 class="text-[20px]" >1. GPT Semantic Cache: Reducing LLM Costs and Latency via Semantic Embedding Caching(preprint)
@@ -379,58 +351,9 @@
       <p>It achieved up to 68.8% reduction in API calls across various query categories, significantly lowering operational costs. It delivered faster response times, improving user experience compared to traditional methods, and demonstrated exceptional reliability with positive hit rates exceeding 97%, ensuring high accuracy in retrieved cached responses.</p>
     </div>
   </div>
+  
 
-  <div class="">
-    <h2 class="text-3xl text-center " >WORK EXPERIENCES</h2>
-    <p class="font-light text-muted-foreground text-center  " >Companies that I have worked with</p>
-
-
-    <div class="container p-4 md:p-32">
-      <div class="row">
-          <div class="col-md-12">
-              <div class="main-timeline">
-                  <div class="timeline">
-                      <a href="#" class="timeline-content">
-                          <div class="timeline-year">MAY 2023 - JUN 2024</div>
-                          <h3 class="title">Co-Founder and Engineer</h3>
-                          <p class="description">
-                            Co-founded TicketSewa, an online ticketing platform based in Nepal.
-                            Played a key role in various aspects of the company, including:<br/>
-                            • System Designing,<br/>
-                            • Project Management,<br/>
-                            • Building the backend server, &<br/>
-                            • Deployment
-                          </p>
-                      </a>
-                  </div>
-                  <div class="timeline">
-                      <a href="#" class="timeline-content">
-                          <div class="timeline-year">AUG 2024 - MAR 2025</div>
-                          <h3 class="title">Backend and AI engineer</h3>
-                          <p class="description">
-                            Built lecturely.ai, an AI companion for students. I was invloved in designing the entire system, developing and managing multiple-ai-agents, managaing message brokers, and implementing a microservices architecture. I also worked on the deployment of the system using Docker and AWS.
-                          </p>
-                      </a>
-                  </div>
-
-                  <div class="timeline">
-                    <a href="#" class="timeline-content">
-                        <div class="timeline-year">JAN 2025 - CURRENT</div>
-                        <h3 class="title">Chief Technology Officer</h3>
-                        <p class="description">
-                          As the CTO and co-founder of Karela Technology, I lead the company's technical vision and innovation, overseeing the development of cutting-edge solutions. I manage a talented team of engineers, driving strategic decisions and ensuring the successful execution of technology initiatives to meet business goals.
-                        </p>
-                    </a>
-                </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  </div>
-
-  </div>
-
-  <div class=" w-full flex flex-col justify-center gap-3 text-center" >
+  <div class=" w-full flex mt-6 flex-col justify-center gap-3 text-center" >
     <h2 class="text-3xl " >MY SKILLS</h2>
     <p class="font-light text-muted-foreground  " >Skills I have acquired till now</p>
 
@@ -642,13 +565,9 @@
     </div>
   </section>
   
+  <div class="border border-gray-200"></div>
   
 </main>
-
-
-
-
-
 <script src="index.js" async></script>
 
   </body>
