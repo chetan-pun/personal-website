@@ -1,574 +1,607 @@
-<html></html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/model.png">
-    <title>CHETAN</title>
+    <title>Chetan Pun — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-		<script type="text/javascript">
-            function openPDF() {
-            const pdfUrl = './assets/projects/doctors.pdf'; // Replace with the path to your PDF file
-            window.open(pdfUrl, '_blank');
+    <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+    <script type="text/javascript">
+      window.tailwind.config = {
+        darkMode: ['class'],
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              border: 'hsl(var(--border))',
+              input: 'hsl(var(--input))',
+              ring: 'hsl(var(--ring))',
+              background: 'hsl(var(--background))',
+              foreground: 'hsl(var(--foreground))',
+              primary: {
+                DEFAULT: 'hsl(var(--primary))',
+                foreground: 'hsl(var(--primary-foreground))'
+              },
+              secondary: {
+                DEFAULT: 'hsl(var(--secondary))',
+                foreground: 'hsl(var(--secondary-foreground))'
+              },
+              destructive: {
+                DEFAULT: 'hsl(var(--destructive))',
+                foreground: 'hsl(var(--destructive-foreground))'
+              },
+              muted: {
+                DEFAULT: 'hsl(var(--muted))',
+                foreground: 'hsl(var(--muted-foreground))'
+              },
+              accent: {
+                DEFAULT: 'hsl(var(--accent))',
+                foreground: 'hsl(var(--accent-foreground))'
+              },
+              popover: {
+                DEFAULT: 'hsl(var(--popover))',
+                foreground: 'hsl(var(--popover-foreground))'
+              },
+              card: {
+                DEFAULT: 'hsl(var(--card))',
+                foreground: 'hsl(var(--card-foreground))'
+              },
+            },
+          }
         }
-
-			window.tailwind.config = {
-				darkMode: ['class'],
-				theme: {
-					extend: {
-						colors: {
-							border: 'hsl(var(--border))',
-							input: 'hsl(var(--input))',
-							ring: 'hsl(var(--ring))',
-							background: 'hsl(var(--background))',
-							foreground: 'hsl(var(--foreground))',
-							primary: {
-								DEFAULT: 'hsl(var(--primary))',
-								foreground: 'hsl(var(--primary-foreground))'
-							},
-							secondary: {
-								DEFAULT: 'hsl(var(--secondary))',
-								foreground: 'hsl(var(--secondary-foreground))'
-							},
-							destructive: {
-								DEFAULT: 'hsl(var(--destructive))',
-								foreground: 'hsl(var(--destructive-foreground))'
-							},
-							muted: {
-								DEFAULT: 'hsl(var(--muted))',
-								foreground: 'hsl(var(--muted-foreground))'
-							},
-							accent: {
-								DEFAULT: 'hsl(var(--accent))',
-								foreground: 'hsl(var(--accent-foreground))'
-							},
-							popover: {
-								DEFAULT: 'hsl(var(--popover))',
-								foreground: 'hsl(var(--popover-foreground))'
-							},
-							card: {
-								DEFAULT: 'hsl(var(--card))',
-								foreground: 'hsl(var(--card-foreground))'
-							},
-						},
-					}
-				}
-			}
-		</script>
-		<style type="text/tailwindcss">
-
-			@layer base {
-				:root {
-					--background: 0 0% 100%;
---foreground: 240 10% 3.9%;
---card: 0 0% 100%;
---card-foreground: 240 10% 3.9%;
---popover: 0 0% 100%;
---popover-foreground: 240 10% 3.9%;
---primary: 240 5.9% 10%;
---primary-foreground: 0 0% 98%;
---secondary: 240 4.8% 95.9%;
---secondary-foreground: 240 5.9% 10%;
---muted: 240 4.8% 95.9%;
---muted-foreground: 240 3.8% 46.1%;
---accent: 240 4.8% 95.9%;
---accent-foreground: 240 5.9% 10%;
---destructive: 0 84.2% 60.2%;
---destructive-foreground: 0 0% 98%;
---border: 240 5.9% 90%;
---input: 240 5.9% 90%;
---ring: 240 5.9% 10%;
---radius: 0.5rem;
-				}
-				.dark {
-					--background: 240 10% 3.9%;
---foreground: 0 0% 98%;
---card: 240 10% 3.9%;
---card-foreground: 0 0% 98%;
---popover: 240 10% 3.9%;
---popover-foreground: 0 0% 98%;
---primary: 0 0% 98%;
---primary-foreground: 240 5.9% 10%;
---secondary: 240 3.7% 15.9%;
---secondary-foreground: 0 0% 98%;
---muted: 240 3.7% 15.9%;
---muted-foreground: 240 5% 64.9%;
---accent: 240 3.7% 15.9%;
---accent-foreground: 0 0% 98%;
---destructive: 0 62.8% 30.6%;
---destructive-foreground: 0 0% 98%;
---border: 240 3.7% 15.9%;
---input: 240 3.7% 15.9%;
---ring: 240 4.9% 83.9%;
-				}
-			}
-		</style>
-
-
-
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        :root {
+          --background: 0 0% 100%;
+          --foreground: 240 10% 3.9%;
+          --card: 0 0% 100%;
+          --card-foreground: 240 10% 3.9%;
+          --popover: 0 0% 100%;
+          --popover-foreground: 240 10% 3.9%;
+          --primary: 240 5.9% 10%;
+          --primary-foreground: 0 0% 98%;
+          --secondary: 240 4.8% 95.9%;
+          --secondary-foreground: 240 5.9% 10%;
+          --muted: 240 4.8% 95.9%;
+          --muted-foreground: 240 3.8% 46.1%;
+          --accent: 240 4.8% 95.9%;
+          --accent-foreground: 240 5.9% 10%;
+          --destructive: 0 84.2% 60.2%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 5.9% 90%;
+          --input: 240 5.9% 90%;
+          --ring: 240 5.9% 10%;
+          --radius: 0.5rem;
+        }
+        .dark {
+          --background: 240 10% 3.9%;
+          --foreground: 0 0% 98%;
+          --card: 240 10% 3.9%;
+          --card-foreground: 0 0% 98%;
+          --popover: 240 10% 3.9%;
+          --popover-foreground: 0 0% 98%;
+          --primary: 0 0% 98%;
+          --primary-foreground: 240 5.9% 10%;
+          --secondary: 240 3.7% 15.9%;
+          --secondary-foreground: 0 0% 98%;
+          --muted: 240 3.7% 15.9%;
+          --muted-foreground: 240 5% 64.9%;
+          --accent: 240 3.7% 15.9%;
+          --accent-foreground: 0 0% 98%;
+          --destructive: 0 62.8% 30.6%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 3.7% 15.9%;
+          --input: 240 3.7% 15.9%;
+          --ring: 240 4.9% 83.9%;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="index.css">
   </head>
-  <body>
-    
+  <body class="font-sans antialiased">
 
-<main class="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
-  <header class="flex px-5 py-5 shadow-sm flex-row md:flex-row justify-between w-full sm:flex-row  lg:px-20 lg:py-5 border-b border-gray-200 
-  '  ">
-    <div class="flex items-center">
-      <h1 class="text-2xl md:text-3xl font-bold text-center">CHETAN</h1>
-      <nav class="ml-4 hidden md:block lg:block xl:block  2xl :block">
-        <a href="#" class="mx-2 md:mx-4  hover:text-muted-foreground">ABOUT</a>
-        <a href="#projects" class="mx-2 md:mx-4 hover:text-muted-foreground">PROJECTS</a>
+<!-- Particle Background Canvas -->
+<canvas id="particleCanvas" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;"></canvas>
+
+<!-- Project Modal -->
+<div id="projectModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+  <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" onclick="closeModal()"></div>
+  <div id="projectModalContent" class="relative bg-white rounded-3xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300 z-10">
+    <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 transition-colors text-gray-600 hover:text-gray-900 z-20">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div id="modalImageArea" class="w-full aspect-video bg-gray-100 rounded-t-3xl overflow-hidden"></div>
+    <div class="p-8">
+      <div id="modalTags" class="flex flex-wrap gap-2 mb-4"></div>
+      <h2 id="modalTitle" class="text-2xl font-bold text-gray-900"></h2>
+      <p id="modalDescription" class="mt-4 text-gray-600 leading-relaxed"></p>
+      <div id="modalDetails" class="mt-6"></div>
+      <div id="modalLinks" class="mt-6 flex gap-3"></div>
+    </div>
+  </div>
+</div>
+
+<main class="flex flex-col items-center min-h-screen bg-background text-foreground relative z-10">
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="sticky top-0 z-50 flex items-center justify-between w-full px-6 py-4 bg-white/80 backdrop-blur-md border-b border-gray-100 lg:px-20">
+    <div class="flex items-center gap-8">
+      <a href="#" class="text-xl font-bold tracking-tight">CHETAN</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+        <a href="#about" class="hover:text-foreground transition-colors">About</a>
+        <a href="#experience" class="hover:text-foreground transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-foreground transition-colors">Projects</a>
+        <a href="#research" class="hover:text-foreground transition-colors">Research</a>
+        <a href="#contact" class="hover:text-foreground transition-colors">Contact</a>
       </nav>
     </div>
-    <div class="flex relative items-center  md:mt-0">
-      <a href="#contact" class="text-secondary-foreground  md:px-4  rounded-lg mr-2 md:mr-4">LET'S CONNECT</a>
-      <div  class="flex items-center p-2 bg-card rounded-3xl shadow px-5 hidden md:flex lg:flex xl:flex  2xl :flex" >
-        <span class="text mr-2">chetan.6.pun@gmail.com</span>
-        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80  rounded" onclick="copyEmail()" aria-label="Copy email address">
-          <img class="bg-white  w-7 " alt="copy-icon" src="./assets/copy.gif" />
+    <div class="flex items-center gap-3">
+      <div class="hidden md:flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-sm">
+        <span class="text-gray-600">chetan.6.pun@gmail.com</span>
+        <button onclick="copyEmail()" aria-label="Copy email address" class="p-1 hover:bg-gray-200 rounded-md transition-colors">
+          <img class="w-5 h-5" alt="Copy" src="./assets/copy.gif" />
         </button>
-        <p class="absolute top-20" id="copyMessage" style="color: green;"></p>
+        <span id="copyMessage" class="text-xs text-emerald-600 font-medium"></span>
       </div>
+      <a href="#contact" class="px-5 py-2 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-90 transition-opacity">
+        Let's Connect
+      </a>
     </div>
-</header>
+  </header>
 
-  <h2 class="text-4xl md:text-6xl font-bold text-center mt-8 md:mt-10">
-    AI <br />
-    ENGINEER, <br />
-    BACKEND<br/> DEVELOPER
-    
-  </h2>
-  <p class="text-base md:text-lg text-center mt-4">
-    CURRENTLY CRAFTING <br />
-    EXPERIENCES AT <br/> <a class="text-blue-600" target = "_blank" href = 'https://karelatechnologies.com/' >Karela Technologies Inc.</a>
-  </p>
-  <p class="text-sm text-center mt-2">(JAN 2025 – PRESENT)</p>
-  <br/>
-  <div class="flex md:gap-5 gap-5 xl:gap-10 lg:gap-10 ">
-    <a  href = 'https://github.com/chetan-pun'><img class="lg:w-[4rem] hover:scale-[1.2] md:w-[2rem] w-[2rem] duration-300 cursor-pointer" src ='./assets/github1.png' alt = 'github-icon' /></a>
-    <a href = 'https://www.linkedin.com/in/chetan-phakami-pun-03a813220/'><img class="lg:w-[4rem] w-[2rem] hover:scale-[1.2] md:w-[2rem]  duration-300 cursor-pointer" src ='./assets/linked-in.png' alt = 'linkedin-icon' /></a>
-    <a href = 'mailto:chetan.6.pun@gmail.com'><img class="lg:w-[4rem] hover:scale-[1.2] duration-300 md:w-[2rem] w-[2rem]  cursor-pointer" src ='./assets/gmail.png' alt = 'gmail-icon' /></a>
-
-  </div>
-  <br/>
-  <br/>
-  <div class=" py-[20px] shadow-lg w-[90%] lg:w-1/3  p-5 rounded-[40px] flex gap-10 items-center border border-gray-100" >
-   <img class="w-[35px] h-[35px]" src="./assets/luna.gif" alt = "luna"/>
-   <p>Hi I'm Luna, Chetan's AI assistant, want to know more about him? Scroll and ask me!!</p>
-  </div>
-  <br/>
-  <a href = "#luna" >
-  <img class="cursor-pointer" src="./assets/arrowdown.gif" alt = 'arrowdown'/>
-</a>
-  <!-- <img aria-hidden="true" alt="portrait" src="./assets/photo.png" class="rounded-lg mt-8 md:mt-10 w-[20rem]" /> -->
-
-  <div  class="px-5 lg:px-20  py-20 " >
-    <h2 class="text-2xl py-5 sm:3xl md:4xl lg:4xl  text-center " >"The best way to predict the future is to invent it." – Alan Kay</h2>
-    <div class="flex flex-col md:flex-row lg:flex-row justify-between gap-0 px-5 py-10  lg:px-60 lg:py-10 text-xl">
-      <div class="w-full">
-      <p class="w-full" >About Me:</p><br/>
-      </div>
-
-      <div class="w-full leading-8 "  >
-          <p>Hi, I am Chetan, a software engineer specializing in desiging and building complex and scalable systems.. Want to know more about me? Ask my Custom Built Personal AI assistant. Luna</p>
-          <br/>
-      </div>
-  </div>
-    <div id = 'luna' class=" lg:px-20 md:px-20 ">
-      <h2 class="text-3xl text-center">Talk to my Assistant Luna</h2>
-      <p class="text-md text-muted-foreground text-center " >Made by Chetan</p>
-      <br />
-      <br />
-      <div class="md:max-w-xl lg:max-w-xl  w-3/3 m-auto  p-4 bg-card rounded-lg border border-gray-200 shadow-2xl  h-[37rem]">
-        <h1 class="text-xl font-bold text-foreground">Hi, I am Luna</h1>
-        <h2 class="text-md text-muted-foreground">Chetan's AI Assistant</h2>
-       
-        <br />
-        <div id = 'questions' class="mt-4">
-            <div class="question">
-              <button id = "research" class="bg-secondary text-secondary-foreground rounded-full px-4 py-2 mr-2 mb-2 hover:bg-secondary/80">Tell me about Chetan's research?</button>
-            </div>
-            <div class="question">
-              <button id = 'purpose' class="bg-secondary text-secondary-foreground rounded-full px-4 py-2 mr-2 mb-2 hover:bg-secondary/80">What's your purpose?</button>
-            </div>
-            <div class="question">
-              <button id = 'chetan' class="bg-secondary text-secondary-foreground rounded-full px-4 py-2 mr-2 mb-2 hover:bg-secondary/80">Who is Chetan?</button>
-            </div>
-          </div>  
-    
-        <div id = 'chatboxMessages' class="mt-4 max-h-[15rem] overflow-y-auto h-[15rem] " >
-          <div class="message">
-          </div>
-        </div>
-    
-        <div class="mt-4 flex items-center">
-          <input id="userInput" type="text" placeholder="Message Luna" class="flex-grow p-2 border border-border rounded-l-lg focus:outline-none "/>
-          <button id="sendMessage" class=" p-2.5 border-2 text-primary-foreground rounded-r-lg px-4 ">
-              <img class="w-[20px]" src="./assets/up-arrow.gif" alt="up arrow ">
-          </button>
-        </div>
-      </div>
+  <!-- ===== HERO ===== -->
+  <section class="flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-sm font-medium text-gray-600 bg-gray-50 rounded-full border border-gray-100 reveal fade-down">
+      <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+      Currently at <a class="text-foreground font-semibold hover:underline" target="_blank" href="https://karelatechnologies.com/">Karela Technologies Inc.</a>
     </div>
-   
 
-  </div>
-
-  
-  <div class="w-full bg-[#f8f7f1] mb-4 py-12 px-4 md:px-12">
-    <!-- Title -->
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">
-      My Work Experience
+    <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] reveal fade-up">
+      Software<br>Engineer
     </h2>
-  
-    <div class="relative">
-      <!-- vertical dashed line, only on md+ -->
-      <div class="hidden md:flex absolute inset-0 justify-center">
-        <div class="h-full border-r-2 border-dashed border-gray-600"></div>
-      </div>
-  
-      <div class="space-y-12 md:space-y-16">
-        <!-- Entry 1 -->
-        <div class="grid grid-cols-1 md:grid-cols-9 items-start">
-          <!-- left text -->
-          <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
-            <div class="text-center md:text-right">
-              <h3 class="text-xl font-semibold text-gray-800">
-                Ticket Sewa Pvt Ltd.
-                <br/>
-                <span class="text-gray-600 mt-1 font-normal "> Pokhara, Nepal</span>
-              </h3>
-              <p class="text-gray-600 mt-1">May 2023 - Jun 2024</p>
-            </div>
-          </div>
-          <!-- dot -->
-          <div class="md:col-span-1 flex justify-center relative">
-            <div
-              class="w-8 h-8 bg-white border-2 border-dotted border-gray-600 rounded-full flex items-center justify-center">
-              <div class="w-4 h-4 bg-teal-600 rounded-full"></div>
-            </div>
-          </div>
-          <!-- right text -->
-          <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
-            <div class="text-center md:text-left">
-              <h3 class="text-xl font-semibold text-gray-800">
-                Co-founder and Sotware Engineer
-              </h3>
-              <div class="text-gray-700 mt-1 leading-relaxed">
-                <p>
-                  Co‑founded <strong>TicketSewa</strong>, an online ticketing platform based in Nepal. As Co‑founder and Backend Engineer, I architected and implemented a microservices‑based system—leveraging Redis for high‑speed caching and AWS for containerized deployment—to ensure seamless scalability and 24/7 availability.
-                </p>
-              
-                <p class="mt-4 font-semibold">Key Responsibilities:</p>
-                <ul class="list-disc list-inside ml-4 space-y-1">
-                  <li>System design and microservices architecture planning.</li>
-                  <li>Development of RESTful and event‑driven APIs in Node.js.</li>
-                  <li>Project management and coordination across product, design, and dev teams.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Entry 2 -->
-        <div class="grid grid-cols-1 md:grid-cols-9 items-start">
-          <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
-            <div class="text-center md:text-right">
-              <h3 class="text-xl font-semibold text-gray-800">
-                Lecturely AI
-                <br/>
-                <span class="text-gray-600 mt-1 font-normal ">Arizona ,United States</span>
-              </h3>
-              <p class="text-gray-600 mt-1">Aug 2024 - Mar 2025</p>
-            </div>
-          </div>
-          <div class="md:col-span-1 flex justify-center relative">
-            <div
-              class="w-8 h-8 bg-white border-2 border-dotted border-gray-600 rounded-full flex items-center justify-center">
-              <div class="w-4 h-4 bg-red-400 rounded-full"></div>
-            </div>
-          </div>
-          <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
-            <div class="text-center md:text-left">
-              <h3 class="text-xl font-semibold text-gray-800">
-                Backend & AI engineer
-              </h3>
-              <div class="text-gray-700 mt-1 leading-relaxed">
-                <p>As a Backend and AI engineer, I built fault-tolerant microservices powering multi-agent workflow using Node.Js, Rabbitmq and Docker.</p>
-                <p class="mt-4 font-semibold">Responsibilities:</p>
-                <ul class="list-disc list-inside ml-4 space-y-1">
-                  <li>System designing.</li>
-                  <li>Developing RESTful and event-driven APIs in Node.js. </li>
-                  <li>Develop AI agents using OpenAI API.</li>
-                  <li>Integrated Rabbitmq for reliable inter-service messaging and queuing.</li>
-                  <li>Containerized services with Docker and deployed on AWS EKS.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Entry 3 -->
-        <div class="grid grid-cols-1 md:grid-cols-9 items-start">
-          <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
-            <div class="text-center md:text-right">
-              <h3 class="text-xl font-semibold text-gray-800">
-                Karela Technologies Inc.
-                <br/>
-                <span class="text-gray-600 mt-1 font-normal "> Arizona ,United States</span>
-              </h3>
-              <p class="text-gray-600 mt-1">Jan 2025 - Present</p>
-            </div>
-          </div>
-          <div class="md:col-span-1 flex justify-center relative">
-            <div
-              class="w-8 h-8 bg-white border-2 border-dotted border-gray-600 rounded-full flex items-center justify-center">
-              <div class="w-4 h-4 bg-yellow-400 rounded-full"></div>
-            </div>
-          </div>
-          <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
-            <div class="text-center md:text-left">
-              <h3 class="text-xl font-semibold text-gray-800">
-                Chief Technology Officer
-              </h3>
-              <p class="text-gray-700 mt-1 leading-relaxed">
-                As the CTO and co-founder of Karela Technology, I lead the company's technical vision and innovation, overseeing the development of cutting-edge solutions. I manage a talented team of engineers, driving strategic decisions and ensuring the successful execution of technology initiatives to meet business goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
 
-  <div  class="px-5 lg:px-20  py-20 lg:w-2/3 ">
-    <h2 class="text-3xl text-center " >MY RESEARCH</h2><br/><br/>
-    <h2 class="text-[20px]" >1. GPT Semantic Cache: Reducing LLM Costs and Latency via Semantic Embedding Caching(preprint)
-       <a class="underline text-blue-900" href = "https://arxiv.org/pdf/2411.05276" >View</a></h2>
-    <div class="py-5" >
-      <p>This research introduces GPT Semantic Cache, a method designed to optimize the efficiency of applications powered by Large Language Models (LLMs). The primary goal is to reduce computational costs and latency by caching semantic embeddings of user queries, enabling faster and more cost-effective responses for repetitive and semantically similar queries.</p>
-      <br/><img src = './assets/gpt_semantic_cache.png' alt = "GPT Semantic Cache" /><br/>
-      <p>It achieved up to 68.8% reduction in API calls across various query categories, significantly lowering operational costs. It delivered faster response times, improving user experience compared to traditional methods, and demonstrated exceptional reliability with positive hit rates exceeding 97%, ensuring high accuracy in retrieved cached responses.</p>
-    </div>
-  </div>
-  
+    <p class="mt-6 text-lg md:text-xl text-gray-500 max-w-xl leading-relaxed reveal fade-up delay-1">
+      I design and build complex, scalable systems &mdash; from backend architecture to AI-powered products.
+    </p>
 
-  <div class=" w-full flex mt-6 flex-col justify-center gap-3 text-center" >
-    <h2 class="text-3xl " >MY SKILLS</h2>
-    <p class="font-light text-muted-foreground  " >Skills I have acquired till now</p>
-
-    <div class=" flex px-20 py-10 gap-10 justify-center flex-wrap " >
-        <div class="w-80 flex gap-3 flex-col items-center">
-            <img class="w-20" src="./assets/python.gif"/>
-            <p>Python</p>
-
-             <p class=" text-muted-foreground">Leverage libraries such as TensorFlow, Keras, Pytorch for AI
-            </p>
-        </div>
-        <div class="w-80 flex gap-3 flex-col items-center">
-            <img class="w-20" src="./assets/js.gif"/>
-            <p>Javascript</p>
-            <p class=" text-muted-foreground  " >Build dynamic web applications and microservices architecture.
-
-        </div>
-        <div class="w-80 flex gap-3 flex-col items-center">
-            <img class="w-20" src="./assets/github-icon.png"/>
-            <p>Github</p>
-            <p class=" text-muted-foreground  " >Version control for efficient collaboration and code management.
-
-        </div>
-        <div class="w-80 flex gap-3 flex-col items-center">
-            <img class="w-20" src="./assets/docker.png"/>
-            <p>Docker</p>
-            <p class=" text-muted-foreground  " >Containerizing applications for consistency across development and production environments.
-
-        </div>
-        <div class="w-80 flex gap-3 flex-col items-center">
-            <img class="w-20" src="./assets/sql.png"/>
-            <p>SQL</p>
-            <p class=" text-muted-foreground  " >Structured data storage and management.
-
-        </div>
-        <div class="w-80 flex gap-3 flex-col items-center">
-            <img class="w-20"  src="./assets/design.gif"/>
-            <p>System Design</p>
-            <p class=" text-muted-foreground  " >Design scalable and efficient system architectures.
-        </div>
+    <div class="flex items-center gap-5 mt-10 reveal fade-up delay-2">
+      <a href="https://github.com/chetan-pun" target="_blank" class="group p-3 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors">
+        <img class="w-6 h-6 group-hover:scale-110 transition-transform" src="./assets/github1.png" alt="GitHub" />
+      </a>
+      <a href="https://www.linkedin.com/in/chetan-phakami-pun-03a813220/" target="_blank" class="group p-3 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors">
+        <img class="w-6 h-6 group-hover:scale-110 transition-transform" src="./assets/linked-in.png" alt="LinkedIn" />
+      </a>
+      <a href="mailto:chetan.6.pun@gmail.com" class="group p-3 rounded-full bg-gray-50 hover:bg-gray-100 transition-colors">
+        <img class="w-6 h-6 group-hover:scale-110 transition-transform" src="./assets/gmail.png" alt="Email" />
+      </a>
     </div>
 
-  </div>
+    <div class="mt-12 flex items-center gap-4 px-6 py-4 bg-white border border-gray-200 rounded-2xl shadow-sm max-w-md">
+      <img class="w-9 h-9 flex-shrink-0" src="./assets/luna.gif" alt="Luna" />
+      <p class="text-sm text-gray-600 text-left">Hi, I'm <strong>Luna</strong> &mdash; Chetan's AI assistant. Want to know more about him? <a href="#luna" class="text-foreground font-medium underline">Ask me below!</a></p>
+    </div>
 
-  <div id = 'projects' class="px-5 lg:px-20 py-20" >
-    <h2 class="text-3xl text-center ">Projects</h2><br/>
-    <div class=" flex px-10 lg:px-20  lg:py-10 gap-20 justify-center flex-wrap " >
-      <div class="lg:max-w-md cursor-pointer  border border-gray-200 rounded-md p-4 shadow-md  hover:scale-[1.05] duration-300 ">
+    <a href="#luna" class="mt-8">
+      <img class="w-8 cursor-pointer animate-bounce" src="./assets/arrowdown.gif" alt="Scroll down" />
+    </a>
+  </section>
 
-        <div class="relative max-w-md mx-auto  " >
-            <div class="overflow-hidden rounded-lg">
-              <div class="flex slider">
-                <img src="./assets/projects/luna/chat.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
-                <img src="./assets/projects/luna/luna_arc.png" alt="Slide 2" class="w-full transition-transform duration-500 ease-in-out transform" />
-                <img src="./assets/projects/luna/chat.png" alt="Slide 3" class="w-full transition-transform duration-500 ease-in-out transform" />
-              </div>
-            </div>
-          </div>
-          <br/>
-
-          <h3 class="text-[20px]" >Luna</h3>
-          <p class="text-muted-foreground" >Luna is an AI assistant designed to simulate conversations
-             and answer questions about Chetan and itself. It is built on top
-              of the Gpt 3.5 turbo LLM and uses RAG (Retrieval-Augmented Generation) for 
-              retrieving information. Additionally, Luna improves with every conversation. </p>
-        </div>
-        <div class="max-w-md  border border-gray-200 rounded-md p-4 shadow-md  cursor-pointer hover:scale-[1.05] duration-300 ">
-
-        <div class="relative max-w-md mx-auto">
-            <div class="overflow-hidden rounded-lg">
-              <div class="flex slider">
-                <img src="./assets/projects/picatu/landing1.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
-                <img src="./assets/projects/picatu/landing2.png" alt="Slide 2" class="w-full transition-transform duration-500 ease-in-out transform" />
-                <img src="./assets/projects/picatu/landing3.png" alt="Slide 3" class="w-full transition-transform duration-500 ease-in-out transform" />
-              </div>
-            </div>
-          </div>
-          <br/>
-
-          <h3 class="text-[20px]" >Picatu</h3>
-          <p class="text-muted-foreground" > Picatu is a tool that
-             searches for images of
-              specific individuals in specific event
-               databases (marriage, ceremony, festivals).
-                Users input an image, and the system returns matching 
-                images using a deep learning-based model trained on labeled data.</p>
-        </div>
-
-
-        <div onclick="openPDF()" class="max-w-md  border border-gray-200 rounded-md p-4 shadow-md cursor-pointer hover:scale-[1.05] duration-300  ">
-
-            <div class="relative max-w-md mx-auto">
-                <div class="overflow-hidden rounded-lg">
-                  <div class="flex">
-                    <img src="./assets/projects/doctors.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
-                  </div>
-                </div>
-              </div>
-              <br/>
-    
-              <h3 class="text-[20px]" >Trusted Doctors</h3>
-              <p class="text-muted-foreground" > Trusted Doctors is an
-                innovative web application designed to connect users with healthcare
-                 professionals, enabling seamless communication and access to quality healthcare services.</p>
-            </div>
-            <a href = 'https://nepaljunglecamp.com/' target="_blank" class="max-w-md cursor-pointer hover:scale-[1.05] duration-300  border border-gray-200 rounded-md p-4 shadow-md ">
-
-                <div class="relative max-w-md mx-auto ">
-                    <div class="overflow-hidden rounded-lg">
-                      <div class="flex slider">
-                        <img src="./assets/projects/travellers/landing1.png" alt="Slide 1" class="w-full transition-transform duration-500 ease-in-out transform" />
-                        <img src="./assets/projects/travellers/landing2.png" alt="Slide 2" class="w-full transition-transform duration-500 ease-in-out transform" />
-                        <img src="./assets/projects/travellers/landing3.png" alt="Slide 3" class="w-full transition-transform duration-500 ease-in-out transform" />
-                      </div>
-                    </div>
-                  </div>
-                  <br/>
-        
-                  <h3 class="text-[20px]" >Travellers Jungle Camp</h3>
-                  <p class="text-muted-foreground" >
-                    Travellers Jungle Camp is a resort based in Chitwan. Customers can book and reserve rooms, jungle safaris, and more through our website.
-                  </p>
-                </a>
-  </div>  
-
-  <section id="contact" class="py-8 bg-white">
-    <h2 class="text-3xl text-center ">Contact</h2><br/>
-    <div class="max-w-5xl py-4 mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      
-      <!-- Left: Illustration + Message -->
-      <div class="text-center md:text-left">
-        <!-- swap this for your SVG/PNG/Lottie -->
-        <img
-          src="/assets/sendMessage.png"
-          alt="Contact illustration"
-          class="mx-auto md:mx-0 mb-6 w-[20rem]"
-        />
-        <h3 class="text-3xl font-semibold mb-4">Let’s Chat!</h3>
-        <p class="text-gray-600">
-          Have a project, question, or just want to say hi? Drop me a message.
-        </p>
-      </div>
-  
-      <!-- Right: Contact Form -->
-      <form
-        action="https://your-form-endpoint.example.com"
-        method="POST"
-        class="space-y-6"
-      >
-        <!-- Name -->
-        <div>
-          <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-md
-                   focus:outline-none focus:ring-2 focus:ring-gray-400"
-            placeholder="Your name"
-          />
-        </div>
-  
-        <!-- Email -->
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-md
-                   focus:outline-none focus:ring-2 focus:ring-gray-400"
-            placeholder="you@example.com"
-          />
-        </div>
-  
-        <!-- Message -->
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-700 mb-1">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            required
-            class="w-full px-4 py-2 border border-gray-300 rounded-md
-                   focus:outline-none focus:ring-2 focus:ring-gray-400"
-            placeholder="How can I help?"
-          ></textarea>
-        </div>
-  
-        <!-- Submit -->
-        <div class="text-center">
-          <button
-            type="submit"
-            class="px-6 py-3 bg-black text-white font-medium rounded-md
-                   hover:bg-gray-800 transition"
-          >
-            Send Message
-          </button>
-        </div>
-      </form>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="w-full max-w-5xl mx-auto px-6 py-20">
+    <div class="text-center mb-12 reveal fade-up">
+      <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">About Me</p>
+      <h2 class="text-2xl md:text-3xl font-semibold text-foreground">"The best way to predict the future is to invent it."</h2>
+      <p class="text-sm text-gray-400 mt-1">&mdash; Alan Kay</p>
+    </div>
+    <div class="max-w-2xl mx-auto reveal fade-up delay-1">
+      <p class="text-lg leading-relaxed text-gray-600">
+        Hi, I'm Chetan &mdash; a software engineer specializing in designing and building complex, scalable systems. From backend microservices to AI-driven products, I love turning ideas into robust, production-ready solutions. Want to know more? Ask my custom-built AI assistant, Luna.
+      </p>
     </div>
   </section>
-  
-  <div class="border border-gray-200"></div>
-  
-</main>
-<script src="index.js" async></script>
 
+  <!-- ===== LUNA ASSISTANT ===== -->
+  <section id="luna" class="w-full max-w-2xl mx-auto px-6 py-16">
+    <div class="text-center mb-8 reveal fade-up">
+      <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">AI Assistant</p>
+      <h2 class="text-3xl font-bold">Meet Luna</h2>
+      <p class="text-sm text-gray-500 mt-1">Built by Chetan &mdash; ask her anything about me</p>
+    </div>
+
+    <div class="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden reveal fade-up delay-1">
+      <!-- Chat header -->
+      <div class="flex items-center gap-3 px-6 py-4 border-b border-gray-100 bg-gray-50/50">
+        <img class="w-8 h-8" src="./assets/luna.gif" alt="Luna" />
+        <div>
+          <h3 class="text-sm font-semibold text-foreground">Luna</h3>
+          <p class="text-xs text-gray-400">Chetan's AI Assistant</p>
+        </div>
+        <span class="ml-auto inline-flex items-center gap-1.5 text-xs text-emerald-600 font-medium">
+          <span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>
+          Online
+        </span>
+      </div>
+
+      <!-- Quick questions -->
+      <div id="questions" class="px-6 pt-4 flex flex-wrap gap-2">
+        <button id="research" class="text-xs px-3.5 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors font-medium">Tell me about Chetan's research</button>
+        <button id="purpose" class="text-xs px-3.5 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors font-medium">What's your purpose?</button>
+        <button id="chetan" class="text-xs px-3.5 py-2 bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200 transition-colors font-medium">Who is Chetan?</button>
+      </div>
+
+      <!-- Messages area -->
+      <div id="chatboxMessages" class="px-6 py-4 h-72 overflow-y-auto space-y-3">
+      </div>
+
+      <!-- Input -->
+      <div class="px-4 py-3 border-t border-gray-100 bg-gray-50/50">
+        <div class="flex items-center gap-2">
+          <input id="userInput" type="text" placeholder="Ask Luna anything..." class="flex-1 px-4 py-2.5 text-sm bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent placeholder-gray-400" />
+          <button id="sendMessage" class="p-2.5 bg-foreground text-background rounded-xl hover:opacity-90 transition-opacity flex-shrink-0">
+            <img class="w-4 h-4 invert" src="./assets/up-arrow.gif" alt="Send" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORK EXPERIENCE ===== -->
+  <section id="experience" class="w-full bg-[#fafaf8] py-20 px-6 md:px-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16 reveal fade-up">
+        <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">Career</p>
+        <h2 class="text-4xl font-bold text-gray-900">Work Experience</h2>
+      </div>
+
+      <div class="relative">
+        <!-- Animated vertical line -->
+        <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200 timeline-line"></div>
+
+        <div class="space-y-16">
+
+          <!-- Entry 1: Karela Technologies (LATEST - FIRST) -->
+          <div class="grid grid-cols-1 md:grid-cols-9 items-start exp-entry reveal fade-right" data-index="0">
+            <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
+              <div class="text-center md:text-right md:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900">Karela Technologies Inc.</h3>
+                <p class="text-sm text-gray-500">Arizona, United States</p>
+                <p class="text-sm text-gray-400 mt-1">Jan 2025 &mdash; Present</p>
+              </div>
+            </div>
+            <div class="md:col-span-1 flex justify-center">
+              <div class="w-4 h-4 bg-emerald-500 rounded-full ring-4 ring-[#fafaf8] relative z-10 timeline-dot" data-color="emerald"></div>
+            </div>
+            <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
+              <div class="text-center md:text-left md:pl-8 max-w-sm exp-card p-5 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg cursor-default">
+                <span class="inline-block px-2.5 py-0.5 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-full mb-2 exp-badge">Current</span>
+                <h3 class="text-lg font-semibold text-gray-900">Chief Technology Officer</h3>
+                <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                  As CTO and co-founder, I lead the company's technical vision and innovation, overseeing the development of cutting-edge solutions. I manage a team of engineers, driving strategic decisions and ensuring successful execution of technology initiatives.
+                </p>
+                <div class="exp-skills mt-4 flex flex-wrap gap-1.5 opacity-0 max-h-0 overflow-hidden transition-all duration-500">
+                  <span class="px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded-full">Leadership</span>
+                  <span class="px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded-full">System Architecture</span>
+                  <span class="px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded-full">Team Management</span>
+                  <span class="px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded-full">Strategy</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 2: Lecturely AI -->
+          <div class="grid grid-cols-1 md:grid-cols-9 items-start exp-entry reveal fade-left" data-index="1">
+            <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
+              <div class="text-center md:text-right md:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900">Lecturely AI</h3>
+                <p class="text-sm text-gray-500">Arizona, United States</p>
+                <p class="text-sm text-gray-400 mt-1">Aug 2024 &mdash; Mar 2025</p>
+              </div>
+            </div>
+            <div class="md:col-span-1 flex justify-center">
+              <div class="w-4 h-4 bg-blue-500 rounded-full ring-4 ring-[#fafaf8] relative z-10 timeline-dot" data-color="blue"></div>
+            </div>
+            <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
+              <div class="text-center md:text-left md:pl-8 max-w-sm exp-card p-5 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg cursor-default">
+                <h3 class="text-lg font-semibold text-gray-900">Co-Founder / Founding Engineer (Backend & AI)</h3>
+                <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                  Built fault-tolerant microservices powering multi-agent workflows using Node.js, RabbitMQ, and Docker.
+                </p>
+                <ul class="mt-3 text-sm text-gray-500 space-y-1 list-none text-center md:text-left exp-list">
+                  <li class="exp-list-item">&#8226; System design and architecture</li>
+                  <li class="exp-list-item">&#8226; RESTful and event-driven APIs in Node.js</li>
+                  <li class="exp-list-item">&#8226; AI agent development with OpenAI API</li>
+                  <li class="exp-list-item">&#8226; RabbitMQ for inter-service messaging</li>
+                  <li class="exp-list-item">&#8226; Docker containerization &amp; AWS EKS deployment</li>
+                </ul>
+                <div class="exp-skills mt-4 flex flex-wrap gap-1.5 opacity-0 max-h-0 overflow-hidden transition-all duration-500">
+                  <span class="px-2 py-0.5 text-xs bg-blue-50 text-blue-600 rounded-full">Node.js</span>
+                  <span class="px-2 py-0.5 text-xs bg-blue-50 text-blue-600 rounded-full">RabbitMQ</span>
+                  <span class="px-2 py-0.5 text-xs bg-blue-50 text-blue-600 rounded-full">Docker</span>
+                  <span class="px-2 py-0.5 text-xs bg-blue-50 text-blue-600 rounded-full">OpenAI</span>
+                  <span class="px-2 py-0.5 text-xs bg-blue-50 text-blue-600 rounded-full">AWS EKS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry 3: TicketSewa (OLDEST - LAST) -->
+          <div class="grid grid-cols-1 md:grid-cols-9 items-start exp-entry reveal fade-right" data-index="2">
+            <div class="md:col-span-4 flex md:justify-end justify-center mb-4 md:mb-0">
+              <div class="text-center md:text-right md:pr-8">
+                <h3 class="text-lg font-semibold text-gray-900">TicketSewa Pvt. Ltd.</h3>
+                <p class="text-sm text-gray-500">Pokhara, Nepal</p>
+                <p class="text-sm text-gray-400 mt-1">May 2023 &mdash; Jun 2024</p>
+              </div>
+            </div>
+            <div class="md:col-span-1 flex justify-center">
+              <div class="w-4 h-4 bg-amber-500 rounded-full ring-4 ring-[#fafaf8] relative z-10 timeline-dot" data-color="amber"></div>
+            </div>
+            <div class="md:col-span-4 flex md:justify-start justify-center mt-4 md:mt-0">
+              <div class="text-center md:text-left md:pl-8 max-w-sm exp-card p-5 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-lg cursor-default">
+                <h3 class="text-lg font-semibold text-gray-900">Co-founder &amp; Software Engineer</h3>
+                <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                  Co-founded <strong>TicketSewa</strong>, an online ticketing platform. Architected a microservices-based system leveraging Redis for caching and AWS for containerized deployment.
+                </p>
+                <ul class="mt-3 text-sm text-gray-500 space-y-1 list-none text-center md:text-left exp-list">
+                  <li class="exp-list-item">&#8226; System design and microservices architecture</li>
+                  <li class="exp-list-item">&#8226; RESTful and event-driven APIs in Node.js</li>
+                  <li class="exp-list-item">&#8226; Cross-team project management</li>
+                </ul>
+                <div class="exp-skills mt-4 flex flex-wrap gap-1.5 opacity-0 max-h-0 overflow-hidden transition-all duration-500">
+                  <span class="px-2 py-0.5 text-xs bg-amber-50 text-amber-600 rounded-full">Node.js</span>
+                  <span class="px-2 py-0.5 text-xs bg-amber-50 text-amber-600 rounded-full">Redis</span>
+                  <span class="px-2 py-0.5 text-xs bg-amber-50 text-amber-600 rounded-full">AWS</span>
+                  <span class="px-2 py-0.5 text-xs bg-amber-50 text-amber-600 rounded-full">Microservices</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEARCH ===== -->
+  <section id="research" class="w-full max-w-4xl mx-auto px-6 py-20">
+    <div class="text-center mb-12 reveal fade-up">
+      <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">Publications</p>
+      <h2 class="text-3xl font-bold">Research</h2>
+    </div>
+
+    <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm reveal fade-up delay-1">
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="flex-1">
+          <span class="inline-block px-2.5 py-0.5 text-xs font-semibold bg-violet-100 text-violet-700 rounded-full mb-3">Preprint</span>
+          <h3 class="text-xl font-semibold text-gray-900 leading-snug">
+            GPT Semantic Cache: Reducing LLM Costs and Latency via Semantic Embedding Caching
+          </h3>
+          <p class="mt-4 text-sm text-gray-600 leading-relaxed">
+            This research introduces GPT Semantic Cache, a method designed to optimize the efficiency of LLM-powered applications. It reduces computational costs and latency by caching semantic embeddings of user queries, enabling faster and more cost-effective responses for semantically similar queries.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-4">
+            <div class="text-center px-4 py-2 bg-gray-50 rounded-lg">
+              <p class="text-2xl font-bold text-foreground">68.8%</p>
+              <p class="text-xs text-gray-500">API Call Reduction</p>
+            </div>
+            <div class="text-center px-4 py-2 bg-gray-50 rounded-lg">
+              <p class="text-2xl font-bold text-foreground">97%+</p>
+              <p class="text-xs text-gray-500">Positive Hit Rate</p>
+            </div>
+          </div>
+          <a href="https://arxiv.org/pdf/2411.05276" target="_blank" class="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium bg-foreground text-background rounded-full hover:opacity-90 transition-opacity">
+            View Paper &rarr;
+          </a>
+        </div>
+        <div class="flex-shrink-0 md:w-80">
+          <img src="./assets/gpt_semantic_cache.png" alt="GPT Semantic Cache Architecture" class="w-full rounded-xl border border-gray-100" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <!-- <section class="w-full py-20 px-6 bg-[#fafaf8]">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">Expertise</p>
+        <h2 class="text-3xl font-bold">Skills</h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <img class="w-14 h-14 object-contain" src="./assets/python.gif" alt="Python" />
+          <p class="font-semibold text-sm">Python</p>
+          <p class="text-xs text-gray-500 text-center">TensorFlow, Keras, PyTorch for AI</p>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <img class="w-14 h-14 object-contain" src="./assets/js.gif" alt="JavaScript" />
+          <p class="font-semibold text-sm">JavaScript</p>
+          <p class="text-xs text-gray-500 text-center">Web apps and microservices</p>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <img class="w-14 h-14 object-contain" src="./assets/github-icon.png" alt="GitHub" />
+          <p class="font-semibold text-sm">GitHub</p>
+          <p class="text-xs text-gray-500 text-center">Version control and collaboration</p>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <img class="w-14 h-14 object-contain" src="./assets/docker.png" alt="Docker" />
+          <p class="font-semibold text-sm">Docker</p>
+          <p class="text-xs text-gray-500 text-center">Containerization and deployment</p>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <img class="w-14 h-14 object-contain" src="./assets/sql.png" alt="SQL" />
+          <p class="font-semibold text-sm">SQL</p>
+          <p class="text-xs text-gray-500 text-center">Data storage and management</p>
+        </div>
+        <div class="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <img class="w-14 h-14 object-contain" src="./assets/design.gif" alt="System Design" />
+          <p class="font-semibold text-sm">System Design</p>
+          <p class="text-xs text-gray-500 text-center">Scalable architectures</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="w-full max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center mb-12 reveal fade-up">
+      <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">Portfolio</p>
+      <h2 class="text-3xl font-bold">Featured Projects</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Project: Luna -->
+      <div class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer project-card reveal fade-up" onclick="openProjectModal('luna')">
+        <div class="overflow-hidden aspect-video bg-gray-50">
+          <div class="flex slider">
+            <img src="./assets/projects/luna/chat.png" alt="Luna Chat Interface" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+            <img src="./assets/projects/luna/luna_arc.png" alt="Luna Architecture" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+            <img src="./assets/projects/luna/chat.png" alt="Luna Chat" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-700 rounded-full">AI</span>
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-purple-50 text-purple-700 rounded-full">RAG</span>
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-green-50 text-green-700 rounded-full">GPT-3.5</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Luna</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+            An AI assistant built on GPT-3.5 Turbo that uses RAG (Retrieval-Augmented Generation) to answer questions about Chetan. Luna improves with every conversation.
+          </p>
+          <span class="inline-flex items-center gap-1 mt-3 text-xs font-medium text-gray-400 group-hover:text-gray-600 transition-colors">View Details <svg class="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Project: Picatu -->
+      <div class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer project-card reveal fade-up delay-1" onclick="openProjectModal('picatu')">
+        <div class="overflow-hidden aspect-video bg-gray-50">
+          <div class="flex slider">
+            <img src="./assets/projects/picatu/landing1.png" alt="Picatu Landing" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+            <img src="./assets/projects/picatu/landing2.png" alt="Picatu Search" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+            <img src="./assets/projects/picatu/landing3.png" alt="Picatu Results" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-orange-50 text-orange-700 rounded-full">Deep Learning</span>
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-pink-50 text-pink-700 rounded-full">Image Recognition</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Picatu</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+            A facial recognition tool that searches for images of specific individuals across event databases. Users input an image, and the system returns matches using a deep learning model.
+          </p>
+          <span class="inline-flex items-center gap-1 mt-3 text-xs font-medium text-gray-400 group-hover:text-gray-600 transition-colors">View Details <svg class="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Project: Trusted Doctors -->
+      <div class="group cursor-pointer bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 project-card reveal fade-up delay-2" onclick="openProjectModal('doctors')">
+        <div class="overflow-hidden aspect-video bg-gray-50">
+          <img src="./assets/projects/doctors.png" alt="Trusted Doctors" class="w-full h-full object-cover" />
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-teal-50 text-teal-700 rounded-full">Healthcare</span>
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-indigo-50 text-indigo-700 rounded-full">Web App</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Trusted Doctors</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+            A web application connecting users with healthcare professionals, enabling seamless communication and access to quality healthcare services.
+          </p>
+          <span class="inline-flex items-center gap-1 mt-3 text-xs font-medium text-gray-400 group-hover:text-gray-600 transition-colors">View Details <svg class="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <!-- Project: Travellers Jungle Camp -->
+      <div class="group bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer project-card reveal fade-up delay-3" onclick="openProjectModal('travellers')">
+        <div class="overflow-hidden aspect-video bg-gray-50">
+          <div class="flex slider">
+            <img src="./assets/projects/travellers/landing1.png" alt="Jungle Camp Landing" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+            <img src="./assets/projects/travellers/landing2.png" alt="Jungle Camp Booking" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+            <img src="./assets/projects/travellers/landing3.png" alt="Jungle Camp Safari" class="w-full h-full object-cover transition-transform duration-500 ease-in-out" />
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-emerald-50 text-emerald-700 rounded-full">Travel</span>
+            <span class="px-2.5 py-0.5 text-xs font-medium bg-amber-50 text-amber-700 rounded-full">Booking</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900">Travellers Jungle Camp</h3>
+          <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+            A resort website for Chitwan's Travellers Jungle Camp where customers can book rooms, jungle safaris, and more.
+          </p>
+          <span class="inline-flex items-center gap-1 mt-3 text-xs font-medium text-gray-400 group-hover:text-gray-600 transition-colors">View Details <svg class="w-3 h-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="w-full bg-[#fafaf8] py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12 reveal fade-up">
+        <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">Get in Touch</p>
+        <h2 class="text-3xl font-bold">Let's Work Together</h2>
+        <p class="mt-3 text-gray-500 max-w-md mx-auto">Have a project, question, or just want to say hi? Drop me a message.</p>
+      </div>
+
+      <div class="max-w-xl mx-auto">
+        <form action="https://your-form-endpoint.example.com" method="POST" class="space-y-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Name</label>
+              <input type="text" id="name" name="name" required
+                class="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent"
+                placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
+              <input type="email" id="email" name="email" required
+                class="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent"
+                placeholder="you@example.com" />
+            </div>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-300 focus:border-transparent resize-none"
+              placeholder="Tell me about your project..."></textarea>
+          </div>
+          <div class="text-center pt-2">
+            <button type="submit" class="px-8 py-3 bg-foreground text-background text-sm font-medium rounded-full hover:opacity-90 transition-opacity">
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="w-full py-8 px-6 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-gray-400">&copy; 2025 Chetan Pun. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/chetan-pun" target="_blank" class="text-sm text-gray-400 hover:text-foreground transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/chetan-phakami-pun-03a813220/" target="_blank" class="text-sm text-gray-400 hover:text-foreground transition-colors">LinkedIn</a>
+        <a href="mailto:chetan.6.pun@gmail.com" class="text-sm text-gray-400 hover:text-foreground transition-colors">Email</a>
+      </div>
+    </div>
+  </footer>
+
+</main>
+<script src="index.js"></script>
   </body>
 </html>

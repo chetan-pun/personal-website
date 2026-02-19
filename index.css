@@ -1,29 +1,309 @@
-.typing-animation {
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid black; /* Cursor */
-    animation:
-      typing 3s steps(30, end),
-      blink-caret 0.75s step-end infinite;
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: black;
-    }
-  }
-  
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for chat */
+#chatboxMessages::-webkit-scrollbar {
+  width: 4px;
+}
+
+#chatboxMessages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#chatboxMessages::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+#chatboxMessages::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Slider overflow */
+.slider {
+  min-width: 100%;
+}
+
+.slider img {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION SYSTEM
+   ========================================== */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.fade-up {
+  transform: translateY(40px);
+}
+
+.reveal.fade-down {
+  transform: translateY(-40px);
+}
+
+.reveal.fade-left {
+  transform: translateX(-60px);
+}
+
+.reveal.fade-right {
+  transform: translateX(60px);
+}
+
+.reveal.fade-scale {
+  transform: scale(0.9);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Stagger delays */
+.reveal.delay-1 { transition-delay: 0.15s; }
+.reveal.delay-2 { transition-delay: 0.3s; }
+.reveal.delay-3 { transition-delay: 0.45s; }
+.reveal.delay-4 { transition-delay: 0.6s; }
+
+/* ==========================================
+   PARTICLE CANVAS
+   ========================================== */
+#particleCanvas {
+  opacity: 0.6;
+}
+
+/* ==========================================
+   TIMELINE ANIMATIONS (Work Experience)
+   ========================================== */
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, #d1d5db 10%, #d1d5db 90%, transparent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timeline-line.active {
+  transform: scaleY(1);
+}
+
+/* Timeline dot pulse on reveal */
+.timeline-dot {
+  transform: scale(0);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.timeline-dot.active {
+  transform: scale(1);
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+}
+
+.timeline-dot[data-color="emerald"].active {
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulseBlue {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(59, 130, 246, 0); }
+}
+
+.timeline-dot[data-color="blue"].active {
+  animation: dotPulseBlue 2s ease-in-out 0.3s infinite;
+}
+
+@keyframes dotPulseAmber {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(245, 158, 11, 0); }
+}
+
+.timeline-dot[data-color="amber"].active {
+  animation: dotPulseAmber 2s ease-in-out 0.6s infinite;
+}
+
+/* Experience card hover - show skill tags */
+.exp-card:hover .exp-skills {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 1rem;
+}
+
+/* Staggered list items reveal */
+.exp-list-item {
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.exp-entry.reveal.active .exp-list-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.exp-entry.reveal.active .exp-list-item:nth-child(1) { transition-delay: 0.2s; }
+.exp-entry.reveal.active .exp-list-item:nth-child(2) { transition-delay: 0.35s; }
+.exp-entry.reveal.active .exp-list-item:nth-child(3) { transition-delay: 0.5s; }
+.exp-entry.reveal.active .exp-list-item:nth-child(4) { transition-delay: 0.65s; }
+.exp-entry.reveal.active .exp-list-item:nth-child(5) { transition-delay: 0.8s; }
+
+/* Badge bounce on reveal */
+.exp-badge {
+  animation: none;
+}
+
+.exp-entry.reveal.active .exp-badge {
+  animation: badgeBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
+@keyframes badgeBounce {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+/* ==========================================
+   PROJECT MODAL
+   ========================================== */
+#projectModal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#projectModal.open #projectModalContent {
+  transform: scale(1);
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* ==========================================
+   PROJECT CARD HOVER EFFECTS
+   ========================================== */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(168, 85, 247, 0.03) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* ==========================================
+   NAV LINK HOVER ANIMATION
+   ========================================== */
+header nav a {
+  position: relative;
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+   MICRO ANIMATIONS
+   ========================================== */
+
+/* Magnetic hover effect on social buttons */
+.group.p-3 {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.group.p-3:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Stat counter animation */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stat-animate {
+  animation: countUp 0.6s ease-out forwards;
+}
+
+/* Floating animation for Luna icon */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.luna-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Text gradient shimmer for hero */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Smooth entrance for form fields */
+#contact form > * {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#contact form.form-revealed > * {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#contact form.form-revealed > *:nth-child(1) { transition-delay: 0.1s; }
+#contact form.form-revealed > *:nth-child(2) { transition-delay: 0.2s; }
+#contact form.form-revealed > *:nth-child(3) { transition-delay: 0.3s; }
+
+/* Research stats number animation */
+.research-stat {
+  display: inline-block;
+}
+
+/* Smooth scrollbar for the whole page */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
