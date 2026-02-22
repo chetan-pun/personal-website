@@ -106,10 +106,11 @@ let chat_history = [];
 (function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal');
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+        obs.unobserve(entry.target);
       }
     });
   }, {
@@ -119,30 +120,52 @@ let chat_history = [];
 
   revealElements.forEach(el => observer.observe(el));
 
-  // Timeline line animation
-  const timelineLine = document.querySelector('.timeline-line');
-  if (timelineLine) {
-    const tlObserver = new IntersectionObserver((entries) => {
+  // Experience entries sometimes sit inside large containers; observe them with
+  // slightly more forgiving settings so they reliably trigger on scroll.
+  const expEntries = document.querySelectorAll('.exp-entry.reveal');
+  if (expEntries.length) {
+    const expObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
+    }, {
+      threshold: 0.05,
+      rootMargin: '0px 0px -30% 0px'
+    });
+
+    expEntries.forEach(el => expObserver.observe(el));
+  }
+
+  // Timeline line animation
+  const timelineLine = document.querySelector('.timeline-line');
+  if (timelineLine) {
+    const tlObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.01, rootMargin: '0px 0px -20% 0px' });
     tlObserver.observe(timelineLine);
   }
 
   // Timeline dots
   const dots = document.querySelectorAll('.timeline-dot');
-  const dotObserver = new IntersectionObserver((entries) => {
+  const dotObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.add('active');
         }, 300);
+
+        obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.2, rootMargin: '0px 0px -20% 0px' });
   dots.forEach(d => dotObserver.observe(d));
 
   // Contact form stagger
@@ -336,7 +359,7 @@ function openProjectModal(projectKey) {
 
   // Details
   document.getElementById('modalDetails').innerHTML = project.details;
-
+   
   // Links
   const linksEl = document.getElementById('modalLinks');
   if (project.links && project.links.length > 0) {
@@ -413,9 +436,9 @@ setInterval(() => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute('id');
         navLinks.forEach(link => {
-          link.classList.remove('text-foreground', 'font-semibold');
+          link.classList.remove('text-foreground', 'nav-active');
           if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('text-foreground', 'font-semibold');
+            link.classList.add('text-foreground', 'nav-active');
           }
         });
       }
